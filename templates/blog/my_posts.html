@@ -9,7 +9,7 @@
             <div class="d-flex justify-content-between align-items-start">
               <div>
                 <h4 class="mb-1">
-                  <a href="{% url 'blog:post_detail.html-detail' pk=post.id %}" class="green-link">{{ post }}</a>
+                  <a href="{% url 'blog:post-detail' pk=post.id %}" class="green-link">{{ post }}</a>
                 </h4>
                 <p class="text-muted mb-0">
                   {{ post.created_time }}<br>

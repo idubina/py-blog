@@ -58,7 +58,7 @@ class CommentaryCreateView(LoginRequiredMixin, generic.CreateView):
     form_class = CommentaryForm
 
     def get(self, request, *args, **kwargs):
-        return redirect("blog:post_detail.html-detail", pk=kwargs["pk"])
+        return redirect("blog:post-detail", pk=kwargs["pk"])
 
     def form_valid(self, form):
         form.instance.post_id = self.kwargs["pk"]
@@ -67,7 +67,7 @@ class CommentaryCreateView(LoginRequiredMixin, generic.CreateView):
 
     def get_success_url(self):
         return reverse(
-            "blog:post_detail.html-detail",
+            "blog:post-detail",
             kwargs={"pk": self.kwargs["pk"]}
         )
 

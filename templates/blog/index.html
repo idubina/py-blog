@@ -9,7 +9,7 @@
       {% for post in post_list %}
         <li>
           <h4 class="mb-1">
-            <a class="green-link" href="{% url 'blog:post_detail.html-detail' pk=post.id %}">{{ post }}</a>
+            <a class="green-link" href="{% url 'blog:post-detail' pk=post.id %}">{{ post }}</a>
           </h4>
           <p class="text-muted">{{ post.created_time }}</p>
         </li>

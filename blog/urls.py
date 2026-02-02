@@ -15,7 +15,7 @@ urlpatterns = [
     path(
         "post/<int:pk>/",
         PostDetailView.as_view(),
-        name="post_detail.html-detail"
+        name="post-detail"
     ),
     path(
         "post/<int:pk>/comment/",
